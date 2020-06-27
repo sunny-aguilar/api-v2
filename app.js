@@ -24,8 +24,6 @@ app.get('/results', function(req, res) {
             res.send(body);
         }
     });
-    // res.render('search');
-    res.send('HOME PAGE API');
 });
 
 // search results route
