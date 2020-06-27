@@ -1,3 +1,5 @@
 <h1>Results Page</h1>
 
-<%= data['Search']%>
+<% data['Search'].forEach(function(movie) { %>
+    <%= movie['Title'] %>
+<% }); %>
