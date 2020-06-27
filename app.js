@@ -21,11 +21,11 @@ app.get('/results', function(req, res) {
     // https://www.omdbapi.com/?apikey=1a06c5c4&s=2001&plot=full
     reqs('https://www.omdbapi.com/?apikey=1a06c5c4&s=2001&plot=full', function(error, response, body) {
         if (!error && response.statusCode == 200) {
-            const results = JSON.parse(body);
+            const data = JSON.parse(body);
             res.send(results.Search[0]);
+            res.render('results');
         }
     });
-    res.render('results');
 });
 
 // search results route
