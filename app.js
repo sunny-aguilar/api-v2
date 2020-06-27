@@ -13,13 +13,13 @@ app.set('view engine', 'ejs');
 // OMDb API key
 // http://www.omdbapi.com/?apikey=1a06c5c4&
 // usage example:
-// https://www.omdbapi.com/?apikey=1a06c5c4&s=2001&plot=full
+// https://www.omdbapi.com/?apikey=1a06c5c4&s=alien&plot=full
 
 
 // set search route
 app.get('/results', function(req, res) {
-    // https://www.omdbapi.com/?apikey=1a06c5c4&s=2001&plot=full
-    reqs('https://www.omdbapi.com/?apikey=1a06c5c4&s=2001&plot=full', function(error, response, body) {
+    // &=
+    reqs('https://www.omdbapi.com/?apikey=1a06c5c4&s=alien&plot=full', function(error, response, body) {
         if (!error && response.statusCode == 200) {
             const data = JSON.parse(body);
             res.render('results', {data: data});
