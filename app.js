@@ -28,7 +28,7 @@ app.get('/results', function(req, res) {
 });
 
 // search results route
-app.get('/search', function(req, res) {
+app.get('/', function(req, res) {
     // res.render(results));
 });
 
