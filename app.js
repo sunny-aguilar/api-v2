@@ -5,7 +5,7 @@ const express = require('express');
 const app = express();
 
 // use request module
-const req = require('request');
+const reqs = require('request');
 
 // set view engine
 app.set('view engine', 'ejs');
@@ -19,9 +19,9 @@ app.set('view engine', 'ejs');
 // set search route
 app.get('/search', function(req, res) {
     // https://www.omdbapi.com/?apikey=1a06c5c4&s=2001&plot=full
-    req('https://www.omdbapi.com/?apikey=1a06c5c4&s=2001&plot=full', function(error, response, body) {
+    reqs('https://www.omdbapi.com/?apikey=1a06c5c4&s=2001&plot=full', function(error, response, body) {
         if (!error && response.statusCode == 200) {
-            //
+            res.send(body);
         }
     });
     // res.render('search');
