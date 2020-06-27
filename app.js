@@ -18,7 +18,7 @@ app.set('view engine', 'ejs');
 
 // set search route
 app.get('/results', function(req, res) {
-    // &=
+    // &=alien will be turned into a variable to make page interactive
     reqs('https://www.omdbapi.com/?apikey=1a06c5c4&s=alien&plot=full', function(error, response, body) {
         if (!error && response.statusCode == 200) {
             const data = JSON.parse(body);
