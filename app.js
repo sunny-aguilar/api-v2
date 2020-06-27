@@ -25,6 +25,7 @@ app.get('/results', function(req, res) {
             res.send(results.Search[0]);
         }
     });
+    // res.render(results);
 });
 
 // search results route
