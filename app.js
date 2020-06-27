@@ -29,7 +29,7 @@ app.get('/results', function(req, res) {
 
 // search results route
 app.get('/', function(req, res) {
-    // res.render(results));
+    // res.render('home'));
 });
 
 
