@@ -17,7 +17,7 @@ app.set('view engine', 'ejs');
 app.get('/search', function(req, res) {
     // https://www.omdbapi.com/?apikey=1a06c5c4&s=2001&plot=full
     // res.render('search');
-    res.send('HOME PAGE');
+    res.send('HOME PAGE API');
 });
 
 // search results route
