@@ -21,6 +21,7 @@ app.get('/results', function(req, res) {
     // https://www.omdbapi.com/?apikey=1a06c5c4&s=2001&plot=full
     reqs('https://www.omdbapi.com/?apikey=1a06c5c4&s=2001&plot=full', function(error, response, body) {
         if (!error && response.statusCode == 200) {
+            const results = JSON.parse(body);
             res.send(body);
         }
     });
