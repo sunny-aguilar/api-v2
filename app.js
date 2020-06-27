@@ -23,7 +23,7 @@ app.get('/results', function(req, res) {
     let url = `https://www.omdbapi.com/?apikey=1a06c5c4&s=${query}&plot=full`
 
     // &=alien will be turned into a variable to make page interactive
-    reqs('url', function(error, response, body) {
+    reqs(url, function(error, response, body) {
         if (!error && response.statusCode == 200) {
             const data = JSON.parse(body);
             res.render('results', {data: data});
