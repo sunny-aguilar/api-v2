@@ -27,9 +27,9 @@ app.get('/results', function(req, res) {
     });
 });
 
-// search results route
+// home route
 app.get('/', function(req, res) {
-    // res.render('home'));
+    // res.render('search'));
 });
 
 
