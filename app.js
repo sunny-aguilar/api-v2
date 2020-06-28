@@ -10,6 +10,9 @@ const reqs = require('request');
 // set view engine
 app.set('view engine', 'ejs');
 
+// use public assets
+app.use(express.static('public'));
+
 // OMDb API key
 // http://www.omdbapi.com/?apikey=1a06c5c4&
 // usage example:
