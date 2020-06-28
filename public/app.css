@@ -7,6 +7,6 @@ container {
     background: #9be7ff;
 }
 
-a:active {
+a:hover {
     text-decoration: none;
 }
