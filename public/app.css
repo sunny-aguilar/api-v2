@@ -6,3 +6,7 @@ h1 {
 container {
     background: #9be7ff;
 }
+
+a:active {
+    text-decoration: none;
+}
